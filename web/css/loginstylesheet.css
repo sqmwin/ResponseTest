@@ -6,25 +6,26 @@ body {
 div {
     margin: auto;
     border: 1px;
-    width: 1200px;
-    height: 1200px;
+    width: 1000px;
+    height: 1000px;
     background-color: snow;
 }
 
 .div {
     border: 1px;
-    width: 400px;
-    height: 400px;
+    width: 700px;
+    height: 500px;
     background-color: cornsilk;
     display: flex;
 }
+/*.div的 display: flex结合.login-div的margin: auto让div垂直居中显示,保证最底层的框架是在屏幕中间*/
 
 .login-div {
     margin:auto;
     text-align: left;
     border: 1px;
-    width: 400px;
-    height: 100px;
+    width: 500px;
+    height: 300px;
     background-color: antiquewhite;
 }
 
@@ -34,8 +35,8 @@ table  {
 
 td {
     border: none;
-    width: 200px;
-    height: 25px;
+    width: 250px;
+    height: 50px;
     text-align: center;
     font-size: 16px;
     font-family: "Microsoft YaHei UI", Arial, serif;
@@ -43,10 +44,10 @@ td {
 
 .login-submit {
     border: none;
-    width: 100px;
-    height: 25px;
+    width: 150px;
+    height: 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Microsoft YaHei UI", Arial, serif;
     background-color: aquamarine;
 }

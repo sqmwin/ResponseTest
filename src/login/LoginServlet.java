@@ -20,6 +20,7 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         //通过request获得提交表单中的用户名和密码
+        //获取表单的内容
         //getParameter(String)--通过表单中的name属性获取表单中的参数
         String name = request.getParameter("username");
         String password = request.getParameter("password");
