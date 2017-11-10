@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="refresh" content="5;url=/servlet/html/login.html"/>
+    <meta http-equiv="Content-Type" content="text/html ; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="/servlet/css/cascadingstylesheet.css">
+    <title>页面定时跳转效果页面</title>
+    <script type="text/javascript">
+        // 从i一直减少,结合head中refresh方法进行跳转的倒计时
+        var i = 5;
+        function everysec() {
+            // 获取要改变的元素,一般用span划分出一块区域
+            var time = document.getElementById("time");
+            // 把区域中的文本设置为方法的参数i,即最初秒数
+            time.innerHTML = i;
+            // 显示i后自减
+            i--;
+            // 递归调用,每隔1秒调用一次
+            // window调用定时器方法,每隔毫秒数1000调用一次"方法()"
+            window.setTimeout("everysec()", 1000);
+        }
+    </script>
+</head>
+<body onload="everysec()">
+<div>
+    <!--设置span标签,用于标注(id)出秒数,通过js实现秒数减少的效果-->
+    <div class="div">页面将在<span id="time"></span>秒后跳转 </div>
+</div>
+
+</body>
+</html>
