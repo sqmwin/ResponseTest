@@ -1,0 +1,52 @@
+/*body的text-align:center结合div的margin: auto让div居中显示,保证最底层的框架是在屏幕中间*/
+body {
+    text-align: center;
+}
+
+div {
+    margin: auto;
+    border: 1px;
+    width: 1200px;
+    height: 1200px;
+    background-color: snow;
+}
+
+.div {
+    border: 1px;
+    width: 400px;
+    height: 400px;
+    background-color: cornsilk;
+    display: flex;
+}
+
+.login-div {
+    margin:auto;
+    text-align: left;
+    border: 1px;
+    width: 400px;
+    height: 100px;
+    background-color: antiquewhite;
+}
+
+table  {
+
+}
+
+td {
+    border: none;
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Microsoft YaHei UI", Arial, serif;
+}
+
+.login-submit {
+    border: none;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Microsoft YaHei UI", Arial, serif;
+    background-color: aquamarine;
+}
