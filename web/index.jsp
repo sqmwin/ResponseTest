@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="./css/cascadingstylesheet.css">
   </head>
   <body>
+  <div>
   <div class="div">
 
     <table>
@@ -37,6 +38,7 @@
         </form></td>
       </tr>
     </table>
+  </div>
   </div>
   </body>
 </html>
