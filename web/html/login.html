@@ -14,11 +14,26 @@
                 <table>
                     <tr>
                         <td>用户名</td>
-                        <td><input type="text" name="username" title="username"></td>
+                        <td class="input"><input type="text" name="username"></td>
                     </tr>
                     <tr>
                         <td>密码</td>
-                        <td><input type="password" name="password" title="password"></td>
+                        <td class="input"><input type="password" name="password"></td>
+                    </tr>
+                    <tr>
+                        <td>验证码</td>
+                        <td class="input">
+                            <input type="text" name="verificationcode">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <a href="#" onclick="changeCode()">
+                                <img id="code" src="/servlet/verificationcodeservlet" />
+                            </a>
+                            <a href="#" onclick="changeCode()">换一张</a>
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="2"><input type="submit" value="登 陆" class="login-submit"></td>
@@ -28,6 +43,6 @@
         </div>
     </div>
 </div>
-
 </body>
+<script type="text/javascript" src="../javascript/changeCode.js"></script>
 </html>

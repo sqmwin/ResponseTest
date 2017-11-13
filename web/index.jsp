@@ -20,20 +20,17 @@
         </td>
       </tr>
       <tr>
-        <td> <form action="/servlet/refreshservlet" method="post" class="login-form
-    ">
+        <td> <form action="/servlet/refreshservlet" method="post" class="login-form">
           <input type="submit" value="跳 转 页 面" class="login-submit">
         </form></td>
       </tr>
       <tr>
-        <td> <form action="/servlet/nocacheservlet" method="post" class="login-form
-    ">
+        <td> <form action="/servlet/nocacheservlet" method="post" class="login-form">
           <input type="submit" value="当前时间禁用缓存" class="login-submit">
         </form></td>
       </tr>
       <tr>
-        <td> <form action="/servlet/downloadservlet" method="post" class="login-form
-    ">
+        <td> <form action="/servlet/downloadservlet" method="post" class="login-form">
           <input type="submit" value="下载图片" class="login-submit">
         </form></td>
       </tr>
