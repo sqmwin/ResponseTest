@@ -7,16 +7,16 @@ import java.util.Random;
 /**
  * 生成web验证码有关的方法的类
  * @author sqm
- * @version 1.1
+ * @version 1.2
  */
 public class VerificationCode {
     //懒汉式单例类,不调用不实例化自己
     /**
      *<p>
-     *默认验证码的取值范围(字符集),包括部分数字和部分大写字母；验证码文字要排除:0,o,i,1
+     *默认验证码的取值范围(字符集),包括部分数字和部分大写字母；验证码文字要排除:0,o,O,1,i,I,l
      *</p>
      */
-    private final String VERIFICATION_CODE_TEXTS = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
+    private final String VERIFICATION_CODE_TEXTS = "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz";
 
     /**
      *<p>
@@ -153,10 +153,12 @@ public class VerificationCode {
         int r = random.nextInt(256);
         int g = random.nextInt(256);
         int b = random.nextInt(256);
+        //rgb = (((r<<8)|g)<<8)|b
         int rgb = r << 8;
         rgb = rgb | g;
         rgb = rgb << 8;
         rgb = rgb | b;
+
         return rgb;
     }
 
@@ -354,8 +356,7 @@ public class VerificationCode {
      * @param   codeText    指定的验证码文字
      */
     private void generateCode(Graphics2D g, String codeText) {
-        //设定验证码文字的大小
-        int fontSize = (int) (0.66 * this.h);
+
 
         /*设定每个字的字体范围*/
         //在给定字体范围内随机获取一个验证码的字体
@@ -365,6 +366,8 @@ public class VerificationCode {
         int[] styles = new int[]{Font.PLAIN,Font.BOLD,Font.ITALIC};
 
         for (int i = 0; i < codeText.length() ; i++) {
+            //设定验证码文字的大小在0.6h-0.72h之间
+            int fontSize = (int)(0.62 * this.h) + random.nextInt((int) (0.12 * this.h));
             //设定每个文字的颜色的取值区间
             Color codeColor = getRandColor(90, 140);
             g.setColor(codeColor);
